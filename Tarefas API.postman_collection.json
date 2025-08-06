@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "e90c98b9-cdf7-4a24-a002-32a87a22cae8",
+		"name": "Tarefas API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21204401"
+	},
+	"item": [
+		{
+			"name": "Listar todas as tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tarefas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar uma nova tarefa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"Testes da API\",\n  \"dataEntrega\": \"2025-05-05\",\n  \"responsavel\": \"Paulo 4998885\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tarefas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar uma tarefa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"Estudar Spring Boot\",\n  \"dataEntrega\": \"2025-08-10\",\n  \"responsavel\": \"Gustavo\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tarefas/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tarefas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir uma tarefa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tarefas/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tarefas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar tarefa por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tarefas/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tarefas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
